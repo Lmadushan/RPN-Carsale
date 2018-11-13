@@ -13,9 +13,38 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('carsinfo', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
+            $table->string('Vehicle_type');
+            $table->string('Year');
+            $table->string('Make');
+            $table->string('Model');
+            $table->string('Generation');
+            $table->string('Number_of_seater');
+            $table->string('Length');
+            $table->string('Width');
+            $table->string('Height');
+            $table->string('WheelBase');
+            $table->string('TrackFront');
+            $table->string('TrackBack');
+            $table->string('GroundClearance');
+            $table->string('CurbWeight');
+            $table->string('MaxTrunkCapacity');
+            $table->string('Enginetype');
+            $table->string('FuelType');
+            $table->string('Power');
+            $table->string('Torque');
+            $table->string('InductionType');
+            $table->string('ValvesPerCylinder');
+            $table->string('GearBoxType');
+            $table->string('NoOfSpeed');
+            $table->string('DriveWheels');
+            $table->string('Break');
+            $table->string('MaxSpeed');
+            $table->string('acceleration');
+            $table->string('FuelConsumptionhighway');
+            $table->string('FuelConsumptionTown');
+            $table->string('Price');
             $table->mediumText('body');
             $table->timestamps();
         });
@@ -28,6 +57,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('carsinfo');
     }
 }
